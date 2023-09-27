@@ -3,9 +3,11 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * delete_nodeint_at_index - Deletes a node at a given index in a linked list.
+ * @head: A pointer to a pointer to the head of the linked list.
+ * @index: The index of the node to delete.
  *
- * Return: Always 0.
+ * Return: 1 if successful, -1 if the node at the given index does not exist.
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
