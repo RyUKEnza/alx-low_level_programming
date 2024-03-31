@@ -31,12 +31,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	n_written = write(STDOUT_FILENO, buffer, n_read);
-	if (n_written == -1 || n_written != n_read)
+	if (n_written == -1)
 	{
 		close(fd);
 		return (0);
 	}
+	else if (n_written != n_read)
+	{
 
+	close(fd);
+	return (0);
+	}
 	close(fd);
 	return (n_written);
 }
